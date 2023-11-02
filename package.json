@@ -1,0 +1,23 @@
+{
+  "name": "etag-calendar",
+  "version": "1.0.0",
+  "description": "Etag-Calendar is a system that displays calendar on the e-ink screen.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lianxj/etag-calendar.git"
+  },
+  "keywords": [
+    "etag",
+    "calendar"
+  ],
+  "author": "lianxijian2022@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lianxj/etag-calendar/issues"
+  },
+  "homepage": "https://github.com/lianxj/etag-calendar#readme"
+}
