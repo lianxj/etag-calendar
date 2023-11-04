@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/lianxj/etag-calendar/issues"
   },
-  "homepage": "https://github.com/lianxj/etag-calendar#readme"
+  "homepage": "https://github.com/lianxj/etag-calendar#readme",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
 }

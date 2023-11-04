@@ -1,0 +1,100 @@
+:root {
+    --primary-color: green;
+    --vt-width: 800px;
+    --vt-height: 480px;
+    --vt-gap: 9px;
+    --vt-cell-width: 66px
+}
+
+*,
+html {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: "宋体";
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 12px;
+    background-color: cadetblue;
+}
+
+.container {
+    width: var(--vt-width);
+    height: var(--vt-height);
+    display: flex;
+    background-color: white;
+}
+
+.main {
+    flex: 0.618;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.side {
+    flex: 0.382;
+    background-color: black;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: var(--vt-gap);
+}
+
+.content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+li {
+    width: var(--vt-cell-width);
+    height: var(--vt-cell-width);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+}
+
+.weeks {
+    background-color: red;
+    border-radius: 4px;
+    margin: 24px var(--vt-gap) 0px var(--vt-gap);
+}
+
+.weeks li {
+    height: 33px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.day {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.daycn {
+    font-size: 12px;
+}
+
+.weekend {
+    color: red;
+}
+
+.active {
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+}
