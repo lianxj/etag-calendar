@@ -1,13 +1,36 @@
-:root {
-    --primary-color: green;
-    --vt-width: 800px;
-    --vt-height: 480px;
-    --vt-gap: 9px;
-    --vt-cell-width: 66px
+html[data-theme='light']:root {
+    --container-backgrond-color: white;
+    --side-backgrond-color: white;
+    --weekend-backgrond-color: red;
+    --weekend-color: white;
+    --day-color: black;
+    --day-active-color: white;
+    --day-active-background-color: black;
+    --side-color: black;
+    --border-color: var(--side-color);
 }
 
-*,
-html {
+html[data-theme='dark']:root {
+    --container-backgrond-color: black;
+    --side-backgrond-color: black;
+    --weekend-backgrond-color: red;
+    --weekend-color: white;
+    --day-color: white;
+    --day-active-color: black;
+    --day-active-background-color: white;
+    --side-color: white;
+    --border-color: var(--side-color);
+}
+
+:root {
+    --container-width: 800px;
+    --container-height: 480px;
+    --weekend-gap: 9px;
+    --day-width: 66px;
+    --middle-background-color: red;
+}
+
+* {
     padding: 0;
     margin: 0;
     font-size: 16px;
@@ -20,16 +43,22 @@ body {
     height: 100%;
     display: flex;
     margin: 0 auto;
-    justify-content: center;
     padding-top: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: cadetblue;
 }
 
+.theme {
+    margin-bottom: 12px;
+}
+
 .container {
-    width: var(--vt-width);
-    height: var(--vt-height);
+    width: var(--container-width);
+    height: var(--container-height);
     display: flex;
-    background-color: white;
+    background-color: var(--container-backgrond-color);
 }
 
 .main {
@@ -39,43 +68,39 @@ body {
     flex-direction: column;
 }
 
-.side {
-    flex: 0.382;
-    background-color: black;
-}
-
 ul {
     display: flex;
     flex-wrap: wrap;
-    margin: var(--vt-gap);
+    margin: var(--weekend-gap);
 }
 
 .content {
-    display: flex;
     height: 100%;
+    display: flex;
     align-items: center;
 }
 
 li {
-    width: var(--vt-cell-width);
-    height: var(--vt-cell-width);
-    list-style: none;
+    width: var(--day-width);
+    height: var(--day-width);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 1px;
+    list-style: none;
+    color: var(--day-color);
 }
 
 .weeks {
-    background-color: red;
+    background-color: var(--weekend-backgrond-color);
     border-radius: 4px;
-    margin: 24px var(--vt-gap) 0px var(--vt-gap);
+    margin: 24px var(--weekend-gap) 0px var(--weekend-gap);
 }
 
 .weeks li {
     height: 33px;
-    color: white;
+    color: var(--weekend-color);
     font-size: 20px;
     font-weight: bold;
 }
@@ -94,7 +119,80 @@ li {
 }
 
 .active {
-    background-color: black;
-    color: white;
-    border-radius: 6px;
+    background-color: var(--day-active-background-color);
+    color: var(--day-active-color);
+    border-radius: 50%;
+}
+
+.side {
+    flex: 0.382;
+    font-weight: bold;
+    color: var(--side-color);
+    background-color: var(--side-backgrond-color);
+    border-left: 2px solid var(--border-color);
+}
+
+.year,
+.month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.year .lYear {
+    font-size: 38px;
+    margin-right: 6px;
+}
+
+.year .gzYear {
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 6px;
+}
+
+.month {
+    align-items: baseline;
+}
+
+.lmonth,
+.lday {
+    font-size: 48px;
+}
+
+.lmonth {
+    margin-right: 6px;
+}
+
+.lday {
+    margin: 0 6px;
+}
+
+.date {
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.my-5 {
+    margin: 16px 0px;
+}
+
+.middle {
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: var(--side-backgrond-color);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--middle-background-color);
+}
+
+svg {
+    width: 32px;
+    height: 32px;
+    color: var(--side-backgrond-color);
+    margin-right: 8px;
 }
